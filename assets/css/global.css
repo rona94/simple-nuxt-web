@@ -1,0 +1,115 @@
+:root {
+    --color-brown: #B67352;
+    --color-light-brown: #FEFBF6;
+}
+
+* {
+    font-family: "Arial";
+}
+
+body {
+    margin: 0;
+    background: var(--color-light-brown);
+}
+
+/* text size */
+.h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* text */
+.text-center {
+    text-align: center;
+}
+
+/* button */
+.btn {
+    min-width: 200px;
+    font-size: 16px;
+    padding: 15px;
+    color: #fff;
+    font-weight: bold;
+    background: var(--color-brown);
+    border: 1px solid var(--color-brown);
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btn-rounded {
+    border-radius: 50px;
+}
+
+/* container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+/* display */
+.d-flex {
+    display: flex;
+}
+
+/* checkbox */
+.checkbox {
+    display: flex;
+    cursor: pointer;
+    width: fit-content;
+    margin-bottom: 10px;
+}
+.checkbox input {
+    display: none;
+}
+.checkbox__checkbox {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 2px;
+    margin-right: 10px;
+}
+.checkbox__checkbox::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border: solid var(--color-brown);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    display: none;
+}
+.checkbox input:checked ~ .checkbox__checkbox::after {
+    display: block;
+}
+.checkbox__label {
+    font-size: 14px;
+    line-height: 15px;
+    color: #fff;
+}
+
+/* select */
+.select {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+.select__label {
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.select select {
+    width: 100%;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
