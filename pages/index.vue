@@ -11,7 +11,7 @@
 
     <section class="home-carousel">
         <div class="container">
-            <p class="h1 text-center">Lorem ipsum</p>
+            <p class="h1 text-center">Products</p>
             <ProductsCarousel />
             <div class="text-center">
                 <NuxtLink to="/products" class="btn btn-rounded">View All Products</NuxtLink>
