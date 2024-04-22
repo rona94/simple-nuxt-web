@@ -22,8 +22,7 @@
 
 <style scoped>
 .home-carousel {
-    padding-top: 50px;
-    padding-bottom: 100px;
+    padding: 50px 15px 100px;
 }
 .about {
     padding-block: 30px;
