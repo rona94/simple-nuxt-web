@@ -43,18 +43,62 @@ export default {
                 this.quantity = newQuantity
             }
         },
-        handleAddToCart() {
-            fetch("http://localhost:8000/cart", {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(this.data)
-            }).then(res => res.json())
+        async handleAddToCart() {
+            const x = fetch("http://localhost:8000/cart/"+this.$route.params.id)
+            .then(res => res.json())
             .then(data => {
-                window.location.reload(true)
+                return data
             })
-            .catch(err => console.log(err))
+            .catch(err => {
+                console.clear() // remove error in console
+                return false
+            });
+
+            x.then((res) => {
+                if(res) {
+                    fetch("http://localhost:8000/cart/"+this.$route.params.id, {
+                        method: 'PUT',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            ...this.data,
+                            total: this.quantity + res.total
+                        })
+                    }).then(res => res.json())
+                    .then(data => {
+                        window.location.reload(true)
+                    })
+                    .catch(err => console.log(err))
+                }
+                else {
+                    fetch("http://localhost:8000/cart", {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            ...this.data,
+                            total: this.quantity
+                        })
+                    }).then(res => res.json())
+                    .then(data => {
+                        window.location.reload(true)
+                    })
+                    .catch(err => console.log(err))
+                }
+            })
+            // fetch("http://localhost:8000/cart", {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //     },
+            //     body: JSON.stringify(this.data)
+            // }).then(res => res.json())
+            // .then(data => {
+            //     window.location.reload(true)
+            // })
+            // .catch(err => console.log(err))
             
             // this.$router.push({path: this.$route.path})
         }

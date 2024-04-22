@@ -25,4 +25,13 @@
     padding-top: 50px;
     padding-bottom: 100px;
 }
+.about {
+    padding-block: 30px;
+}
+@media screen and (min-width: 768px) {
+    .about {
+        padding-block: 90px;
+    }
+}
+
 </style>

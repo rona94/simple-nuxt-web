@@ -70,7 +70,8 @@ export default {
             fetch("http://localhost:8000/cart")
                 .then(res => res.json())
                 .then(data => {
-                    this.arrangeData(data)
+                    this.data = data;
+                    // this.arrangeData(data)
                 })
                 .catch(err => console.log(err))
         }

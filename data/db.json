@@ -79,46 +79,16 @@
       "img": "images/pexels-quang-nguyen-vinh-2144200.jpg"
     },
     {
-      "id": "1",
-      "name": "Lorem Ipsum 1",
+      "id": "4",
+      "name": "Lorem Ipsum 4",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut tellus vestibulum, efficitur mi sit amet, dignissim dolor. Sed mollis bibendum neque ac placerat. Proin fringilla neque nunc, et interdum nisl pulvinar tincidunt. Nam dictum nunc at lectus accumsan sagittis. Sed rhoncus imperdiet purus, tempor hendrerit massa porttitor nec. Donec metus elit, euismod ac pulvinar in, sollicitudin ut elit. Donec consequat risus eget diam malesuada interdum.",
       "price": 200,
       "tags": [
         "Cake",
         "Dessert"
       ],
-      "img": "images/pexels-quang-nguyen-vinh-2144200.jpg"
-    },
-    {
-      "id": "1",
-      "name": "Lorem Ipsum 1",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut tellus vestibulum, efficitur mi sit amet, dignissim dolor. Sed mollis bibendum neque ac placerat. Proin fringilla neque nunc, et interdum nisl pulvinar tincidunt. Nam dictum nunc at lectus accumsan sagittis. Sed rhoncus imperdiet purus, tempor hendrerit massa porttitor nec. Donec metus elit, euismod ac pulvinar in, sollicitudin ut elit. Donec consequat risus eget diam malesuada interdum.",
-      "price": 200,
-      "tags": [
-        "Cake",
-        "Dessert"
-      ],
-      "img": "images/pexels-quang-nguyen-vinh-2144200.jpg"
-    },
-    {
-      "id": "2",
-      "name": "Lorem Ipsum 2",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut tellus vestibulum, efficitur mi sit amet, dignissim dolor. Sed mollis bibendum neque ac placerat. Proin fringilla neque nunc, et interdum nisl pulvinar tincidunt. Nam dictum nunc at lectus accumsan sagittis. Sed rhoncus imperdiet purus, tempor hendrerit massa porttitor nec. Donec metus elit, euismod ac pulvinar in, sollicitudin ut elit. Donec consequat risus eget diam malesuada interdum.",
-      "price": 200,
-      "tags": [
-        "Cupcake"
-      ],
-      "img": "images/pexels-quang-nguyen-vinh-2144200.jpg"
-    },
-    {
-      "id": "2",
-      "name": "Lorem Ipsum 2",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut tellus vestibulum, efficitur mi sit amet, dignissim dolor. Sed mollis bibendum neque ac placerat. Proin fringilla neque nunc, et interdum nisl pulvinar tincidunt. Nam dictum nunc at lectus accumsan sagittis. Sed rhoncus imperdiet purus, tempor hendrerit massa porttitor nec. Donec metus elit, euismod ac pulvinar in, sollicitudin ut elit. Donec consequat risus eget diam malesuada interdum.",
-      "price": 200,
-      "tags": [
-        "Cupcake"
-      ],
-      "img": "images/pexels-quang-nguyen-vinh-2144200.jpg"
+      "img": "images/pexels-quang-nguyen-vinh-2144200.jpg",
+      "total": 2
     }
   ]
 }
