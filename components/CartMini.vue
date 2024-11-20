@@ -31,10 +31,19 @@
 </template>
 
 <script>
+import { useCartStore } from '@/stores/cartStore'
+
+const cartStore = useCartStore()
+
 export default {
     data() {
         return {
-            data: []
+            // data: []
+        }
+    },
+    computed: {
+        data() {
+            return cartStore.cart
         }
     },
     methods: {
@@ -44,7 +53,8 @@ export default {
                 method: 'DELETE',
             }).then(res => res.json())
             .then(data => {
-                window.location.reload(true)
+                this.getData()
+                // window.location.reload(true)
             })
             .catch(err => console.log(err))
         },
@@ -70,8 +80,12 @@ export default {
             fetch("http://localhost:8000/cart")
                 .then(res => res.json())
                 .then(data => {
-                    this.data = data;
-                    // this.arrangeData(data)
+                    let total = 0;
+                    data.forEach((value, index) => {
+                        total += value.total || 1;
+                    })
+                    cartStore.updateCartTotal(total)
+                    cartStore.updateCart(data)
                 })
                 .catch(err => console.log(err))
         }

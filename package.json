@@ -11,9 +11,13 @@
   },
   "dependencies": {
     "@nuxt/image": "^1.5.0",
+    "@pinia/nuxt": "^0.7.0",
     "json-server": "^1.0.0-alpha.23",
-    "nuxt": "^3.11.2",
+    "pinia": "^2.2.6",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "nuxt": "^3.14.1592"
   }
 }

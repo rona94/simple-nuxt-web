@@ -24,23 +24,29 @@
 </template>
 
 <script>
+import { useCartStore } from '@/stores/cartStore'
+
+const cartStore = useCartStore()
+
 export default {
     data() {
         return {
-            cartLength: 0,
+            // cartLength: 0,
             isCartVisibile: false
         }
     },
+    computed: {
+        cartLength() {
+            return cartStore.cartTotal
+        },
+    },
     methods: {
         arrangeData(data) {
-            let ids = [];
+            let total = 0;
             data.forEach((value, index) => {
-                if(!ids.includes(value.id)) {
-                    ids.push(value.id)
-                }
+                total += value.total || 1;
             })
-
-            this.cartLength = ids.length
+            cartStore.updateCartTotal(total)
         },
     },
     mounted() {

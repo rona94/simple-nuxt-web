@@ -29,6 +29,8 @@
 </template>
 
 <script>
+import { useCartStore } from '@/stores/cartStore'
+
 export default {
     data() {
         return {
@@ -42,6 +44,21 @@ export default {
             if(newQuantity >= this.$refs.input.getAttribute("min") && newQuantity <= this.$refs.input.getAttribute("max")) {
                 this.quantity = newQuantity
             }
+        },
+        cartLength() {
+            const cartStore = useCartStore()
+
+            fetch("http://localhost:8000/cart")
+            .then(res => res.json())
+            .then(data => {
+                let total = 0;
+                data.forEach((value, index) => {
+                    total += value.total || 1;
+                })
+                cartStore.updateCartTotal(total)
+                cartStore.updateCart(data)
+            })
+            .catch(err => console.log(err))
         },
         async handleAddToCart() {
             const x = fetch("http://localhost:8000/cart/"+this.$route.params.id)
@@ -67,7 +84,8 @@ export default {
                         })
                     }).then(res => res.json())
                     .then(data => {
-                        window.location.reload(true)
+                        // window.location.reload(true)
+                        this.cartLength()
                     })
                     .catch(err => console.log(err))
                 }
@@ -83,7 +101,8 @@ export default {
                         })
                     }).then(res => res.json())
                     .then(data => {
-                        window.location.reload(true)
+                        // window.location.reload(true)
+                        this.cartLength()
                     })
                     .catch(err => console.log(err))
                 }

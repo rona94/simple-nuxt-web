@@ -6,5 +6,5 @@ export default defineNuxtConfig({
     '@/assets/css/global.css'
   ],
 
-  modules: ["@nuxt/image"]
+  modules: ["@pinia/nuxt", "@nuxt/image"]
 })
